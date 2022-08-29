@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - [FCC] Survey Form</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="background"></div>
+<div id="form-container">
+  <img src="https://dinhngoc.work/wp-content/uploads/2021/07/hoa.png" style="max-height:60px;">
+  <h1 id="title"> Survey Form</h1>
+  <p id="description"> Let us know how we can improve your experience</p>
+  
+<!--   Survey -->
+  <form id="survey-form">
+    
+    <div class="row">
+      <label id="name-label" for="name">Name<span class="required"> *</span></label>
+      <input id="name" type="text" class="input-field" placeholder="Enter your name" required>
+    </div>
+    
+    <div class="row">
+      <label id="email-label" for="email">Email<span class="required"> *</span></label>
+      <input id="email" type="email" class="input-field" placeholder="Enter your email" required>
+    </div>
+    
+    <div class="row">
+      <label id="number-label" for="number">Age<span class="required"> *</span></label>
+      <input id="number" type="number" min="1" max="125" class="input-field" placeholder="Enter your age">
+    </div>
+    
+    <div class="row">
+      <label for="current-position">Which option best describe your current position?<span class="required"> *</span></label>
+      <select id="dropdown" class="input-field" name="current-position" required>
+        <option disabled value selected>Select an option</option>
+        <option value="student">Student</option>
+        <option value="fulltime">Full-time job</option>
+        <option value="other">Others</option>
+      </select>
+    </div>
+    
+    <div class="row">
+    <label for="userrating">How likely is that you would recommend freeCodeCamp to a friend?</label>
+      <ul>
+        <li>
+          <label class="radio"><input type="radio" name="userrating" value="definitely">Definitely<span class="radio-button"></span></label>
+        </li>
+        <li>
+          <label class="radio"><input type="radio" name="userrating" value="maybe">Maybe<span class="radio-button"></span></label>
+        </li>
+        <li>
+          <label class="radio"><input type="radio" name="userrating" value="no">No<span class="radio-button"></span></label>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="row">
+      <label for="improve"> Things that should be improved in the future (Check all that apply):</label>
+      <ul>
+        <li>
+          <label class="checkbox"><input type="checkbox" name="improve" value="1">Front-end projects<span class="checked"></span></label>
+        </li>
+        <li>
+          <label class="checkbox"><input type="checkbox" name="improve" value="2">Back-end projects<span class="checked"></span></label>
+        </li>
+        <li>
+          <label class="checkbox"><input type="checkbox" name="improve" value="3">Data visualization<span class="checked"></span></label>
+        </li>
+        <li>
+          <label class="checkbox"><input type="checkbox" name="improve" value="4">Challenges<span class="checked"></span></label>
+        </li>
+        <li>
+          <label class="checkbox"><input type="checkbox" name="improve" value="5">Open source community<span class="checked"></span></label>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="row">
+      <label for="comment"> Any comments or suggestions?</label>
+      <textarea id="comment" placeholder="Enter your comment here" class="input-field"></textarea>
+    </div>
+    
+    <button id="submit" type="submit">Submit</button>
+    
+  </form>
+</div>
+<!-- partial -->
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
